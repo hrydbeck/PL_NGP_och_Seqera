@@ -1,2 +1,2 @@
 # PL_NGP_och_Seqera
-Preparatory notes for presentatio
+Preparatory notes for presentation
