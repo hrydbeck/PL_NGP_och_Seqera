@@ -1,0 +1,67 @@
+---
+title: "Bioinformatik på PL?"
+# author: "Halfdan Rydbeck"
+date: now
+format: 
+  revealjs:
+   theme: league
+   
+editor: visual
+---
+
+
+## Precisionmedicinskt Laboratorium 
+
+
+![](images\pl_1.png){width=80%}
+
+::: incremental
+-   [**Biologiskt prov**]{style="color:blue;"}
+
+-   [**Variant(er)**]{style="color:green;"}
+
+-   [**Resistensgener**]{style="color:lightgreen;"}
+:::
+
+## {auto-animate=true}
+
+
+![](images\PL_2.png){.absolute top=200 left=0 width="150" height="100"}
+
+## {auto-animate=true} 
+
+
+![](images\PL_2.png)
+
+- Lite text kan vi ha också
+- Ocks här
+
+
+
+
+## Quarto
+
+https://www.regionostergotland.se/ro/press/grafisk-profil/ladda-ner-logotyp
+
+Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+
+## Bullets
+
+When you click the **Render** button a document will be generated that includes:
+
+-   Content authored with markdown
+-   Output from executable code
+
+## Code
+
+When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+
+
+
+
+
