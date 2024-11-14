@@ -1,0 +1,299 @@
+---
+title: "PL, NGP och Nextflow"
+# author: "Halfdan Rydbeck"
+date: now
+format: 
+  revealjs:
+   theme: league
+   chalkboard: true
+   preview-links: auto
+   # multiplex: true
+   
+   
+editor: visual
+---
+
+## Precisionmedicinskt Laboratorium (PL) - service
+
+
+![](images\pl_1.png){width="400"} <!--
+{.absolute top=100 left=100 width="400" height="400"}
+-->
+
+::: incremental
+-   [**Biologiskt prov**]{style="color:blue;"}
+
+-   [**Variant(er)**]{style="color:green;"}
+
+-   [**Resistensgener**]{style="color:lightgreen;"}
+:::
+
+## PL- Next Genaration Sequencing (NGS) {auto-animate="true"}
+
+![](images\PL_2.png){.absolute top="200" left="0" height="500"}
+
+## PL {auto-animate="true"}
+
+![](images\pl_rd_1.png){.lightbox width="400"}
+
+-   Lite text kan vi ha också
+-   Ocks här
+
+## PL ingår i nätverket Genome Medicine sweden (GMS)
+
+Parallelt med Scilife-lab nätverk
+
+::: columns
+::: {.column width="20%"}
+![](images\SciLifeLab_CGnodes_GMS_GMCs_1.png){width="200"}
+:::
+
+::: {.column width="40%"}
+```{r}
+# code to produce the graph above without arrow annotations. 
+library('plotly')
+
+df <- data.frame(
+  labels = c(
+    'GMS/sciLifeLab', 
+    'PL_L_GMC', 'CG_L', 
+    'GMC_2', 'CG_2', 
+    'GMC_3', 'CG_3', 
+    'GMC_4', 'CG_4',
+    'GMC_5', 'CG_5', 
+    'GMC_6', 'CG_6'
+  ), 
+  parents = c (
+    '',
+    'GMS/sciLifeLab', 'PL_L_GMC',
+    'GMS/sciLifeLab', 'GMC_2', 
+    'GMS/sciLifeLab', 'GMC_3', 
+    'GMS/sciLifeLab', 'GMC_4', 
+    'GMS/sciLifeLab', 'GMC_5', 
+    'GMS/sciLifeLab', 'GMC_6'
+  ),
+  values = c(
+    12,
+    2, 2, 
+    2, 2, 
+    2, 2,
+    2, 2,
+    2, 2,
+    2, 2
+  )
+)
+
+plot_ly(df,
+        labels = ~labels,
+        parents =  ~parents,
+        values = ~values,
+        type = 'sunburst',
+        branchvalues='total')
+
+```
+:::
+
+::: {.column width="40%"}
+-   ScilifeLab
+    -   Clinical Genomic (CG) key services
+-   GMS
+    -   Genomisk Medicin Centrum (GMC)
+:::
+:::
+
+```{=html}
+<!--
+![](images\pl_rd_2.png)
+-->
+```
+## PL ingår i nätverket Genome Medicine sweden (GMS) 2
+
+Som har ett systernätverk i SciLifeLabs Clinicla Genmics noder
+
+```{r}
+# code to produce the graph above without arrow annotations. 
+library('plotly')
+
+df <- data.frame(
+  labels = c(
+    'GMS/sciLifeLab', 
+    'PL_L_GMC', 'CG_L', 
+    'GMC_2', 'CG_2', 
+    'GMC_3', 'CG_3', 
+    'GMC_4', 'CG_4',
+    'GMC_5', 'CG_5', 
+    'GMC_6', 'CG_6'
+  ), 
+  parents = c (
+    '',
+    'GMS/sciLifeLab', 'PL_L_GMC',
+    'GMS/sciLifeLab', 'GMC_2', 
+    'GMS/sciLifeLab', 'GMC_3', 
+    'GMS/sciLifeLab', 'GMC_4', 
+    'GMS/sciLifeLab', 'GMC_5', 
+    'GMS/sciLifeLab', 'GMC_6'
+  ),
+  values = c(
+    12,
+    2, 2, 
+    2, 2, 
+    2, 2,
+    2, 2,
+    2, 2,
+    2, 2
+  )
+)
+
+plot_ly(df,
+        labels = ~labels,
+        parents =  ~parents,
+        values = ~values,
+        type = 'sunburst',
+        branchvalues='total')
+
+```
+
+## National genomics Platform (NGP)
+
+Navet i GMS inbördes samverkan, men också med andra instanser
+
+```{r}
+# code to produce the graph above without arrow annotations. 
+library('plotly')
+
+df <- data.frame(
+  labels = c(
+    'NGP',
+    'PL_L_GMC',
+    'GMC_2',
+    'GMC_3',
+    'GMC_4',
+    'GMC_5',
+    'GMC_6'
+  ), 
+  parents = c (
+    '',
+    'NGP',
+    'NGP',
+    'NGP',
+    'NGP',
+    'NGP',
+    'NGP'
+  ),
+  values = c(
+    12,
+    2,  
+    2,
+    2,
+    2,
+    2,
+    2
+  )
+)
+
+plot_ly(df,
+        labels = ~labels,
+        parents =  ~parents,
+        values = ~values,
+        type = 'sunburst',
+        branchvalues='total')
+
+```
+
+## NGP
+
+Navet i GMS samverkan
+
+![](images\NGPÖversikt_1.png)
+
+## NGP
+
+-   På NGP commander (NGPc) installeras det workflows. Huvudsakligen baserat på Workflow management systemet Nextflow.
+-   Vad är ett workflow?
+
+## PL - Sällsynta diagnoser {auto-animate="true"}
+
+![](images\rd_1.png)
+
+## Sällsynta diagnoser - workflow
+
+![](images\rd_1.png){.absolute top="0" left="0" widtdh="2000"}
+
+![](images\Workflow.drawio_1_a.png){.absolute top="200" left="0" width="1000"}
+
+## Hur var kan ett sådant/sådana arbetsflöde(n) köras?
+## Hårdvara - HPC
+
+![](images\HPC-schematic.png)
+https://wvuhpc.github.io/Introduction-HPC/aio/index.html
+
+## Jobbschemaläggare och resurshanterare
+- slurm
+- altair grid engine
+
+## Git ett system för versionskotrollering
+https://www.neonscience.org/resources/learning-hub/tutorials/github-git-add
+
+![](images\git_1.png)
+
+## Kollektivt versionskontrollerad mjukvaruutveckling A
+
+https://images.app.goo.gl/ERfAufK2HQMuXEkn9
+
+![](images\github_1.png)
+
+## Kollektivt versionskontrollerad mjukvaruutveckling B
+
+## Program utveckalde i en specifik hårdvarukonfiguratin skall kunna köras i vilken som helst annan
+
+
+
+::: columns
+::: {.column}
+
+
+
+![](images\containers_1.png){width="300"}
+
+:::
+:::{.column}
+
+Mjukvaru utvecking ersätts av container utveckling
+
+Container hanterings system:
+
+- Docker
+- Singularity
+:::
+:::
+
+## Arbetssflödes hanteringsprogram
+
+- Nextflow
+
+![](images\nextflow_1.PNG){width="700"}
+
+## Seqera platform
+
+
+
+Also put in an image of file tree to show that geting an overview of all the files is messy form commland line
+
+![](images\seqera_1.png)
+![](images\nextflow_1.PNG){width="700"}
+
+
+
+## Excalidraw
+
+[Excalidraw](https://excalidraw.com/){preview-link="true"}
+
+
+
+## Code
+
+When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
