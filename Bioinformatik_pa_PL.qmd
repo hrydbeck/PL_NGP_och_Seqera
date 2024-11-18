@@ -7,13 +7,15 @@ format:
    theme: league
    chalkboard: true
    preview-links: auto
+   logo: images\RÖ_logos\ROlogo-P-vit.png
+   css: logo.css
    # multiplex: true
    
    
 editor: visual
 ---
 
-## Precisionmedicinskt Laboratorium (PL) - service
+## Precisionsmedicinskt Laboratorium (PL) - service
 
 
 ![](images\pl_1.png){width="400"} <!--
@@ -38,6 +40,10 @@ editor: visual
 
 -   Lite text kan vi ha också
 -   Ocks här
+
+## Sekvensering, nätverk, lagring och beräkningsresurser
+
+![](images\networks.drawio_no_legend.png)
 
 ## PL ingår i nätverket Genome Medicine sweden (GMS)
 
@@ -227,11 +233,15 @@ Navet i GMS samverkan
 ![](images\HPC-schematic.png)
 https://wvuhpc.github.io/Introduction-HPC/aio/index.html
 
+## Hårdvara - Moln beräkning (AWS)
+
+![](images\Cloud_computing.png)
+
 ## Jobbschemaläggare och resurshanterare
 - slurm
 - altair grid engine
 
-## Git ett system för versionskotrollering
+## Git ett system för versionskontrollering
 https://www.neonscience.org/resources/learning-hub/tutorials/github-git-add
 
 ![](images\git_1.png)
@@ -244,7 +254,7 @@ https://images.app.goo.gl/ERfAufK2HQMuXEkn9
 
 ## Kollektivt versionskontrollerad mjukvaruutveckling B
 
-## Program utveckalde i en specifik hårdvarukonfiguratin skall kunna köras i vilken som helst annan
+## Program utveckalde i en specifik hårdvarukonfiguration skall kunna köras i vilken som helst annan
 
 
 
