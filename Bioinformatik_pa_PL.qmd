@@ -114,7 +114,7 @@ plot_ly(df,
 ```
 ## PL ingår i nätverket Genome Medicine sweden (GMS) 2
 
-Som har ett systernätverk i SciLifeLabs Clinicla Genmics noder
+Som har ett systernätverk i SciLifeLabs Clinical Genomics noder
 
 ```{r}
 # code to produce the graph above without arrow annotations. 
@@ -158,6 +158,15 @@ plot_ly(df,
         branchvalues='total')
 
 ```
+
+## NGP ingår i ett nätverk
+
+![](images\pl_gdp_ehds_1.png)
+
+
+
+
+
 
 ## National genomics Platform (NGP)
 
