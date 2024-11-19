@@ -161,7 +161,7 @@ plot_ly(df,
 
 ## NGP ingår i ett nätverk
 
-![](images\pl_gdp_ehds_1.png)
+![](images\pl_ngp_ehds_1.png)
 
 
 
@@ -249,6 +249,33 @@ https://wvuhpc.github.io/Introduction-HPC/aio/index.html
 ## Jobbschemaläggare och resurshanterare
 - slurm
 - altair grid engine
+
+## vad kan versionskontrolleras?
+
+::: columns 
+::: {.column width="50%" .incremental}
+![](images\text_file_verson_controlling.png)
+:::
+
+::: {.column width="50%" .incremental}
+
+:::
+:::
+
+## vad kan versionskontrolleras?
+
+::: columns 
+::: {.column width="50%" .incremental}
+![](images\text_file_verson_controlling.png)
+:::
+
+::: {.column width="50%" .incremental}
+![](images\folder_verson_controlling.png)
+:::
+:::
+
+
+
 
 ## Git ett system för versionskontrollering
 https://www.neonscience.org/resources/learning-hub/tutorials/github-git-add
