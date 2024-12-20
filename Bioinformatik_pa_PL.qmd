@@ -15,326 +15,365 @@ format:
 editor: visual
 ---
 
-## Precisionsmedicinskt Laboratorium (PL) - service
+## [Precisionsmedicinskt Laboratorium (PL) - service]{style="color:orange;"}
 
+::: columns
+::: {.column width="70%"}
+![](images\pl_summary\pl_3_2.png){width="400"}
+:::
 
-![](images\pl_1.png){width="400"} <!--
-{.absolute top=100 left=100 width="400" height="400"}
--->
+::: {.column width="30%"}
+-   [**Biologiskt prov**]{style="color:blue;"}
+:::
 
-::: incremental
+:::
+
+## [Precisionsmedicinskt Laboratorium (PL) - service]{style="color:orange;"}
+
+::: columns
+::: {.column width="70%"}
+![](images\pl_summary\pl_3_3.png){width="400"}
+:::
+
+::: {.column width="30%"}
+
 -   [**Biologiskt prov**]{style="color:blue;"}
 
 -   [**Variant(er)**]{style="color:green;"}
 
--   [**Resistensgener**]{style="color:lightgreen;"}
+
+:::
+:::
+
+## [Precisionsmedicinskt Laboratorium (PL) - service]{style="color:orange;"}
+
+
+::: columns
+::: {.column width="70%"}
+
+![](images\pl_summary\pl_3_4.png){width="400"}
+
+:::
+
+::: {.column width="30%"}
+
+-   [**Biologiskt prov**]{style="color:blue;"}
+
+-   [**Variant(er)**]{style="color:green;"}
+
+-   [**Resistensgener**]{style="color:orange;"}
+
+
+:::
 :::
 
 ## PL- Next Genaration Sequencing (NGS) {auto-animate="true"}
 
-![](images\PL_2.png){.absolute top="200" left="0" height="500"}
+![](images\pl_arbetsflöde\pl_4_2.png){.lightbox width="400"}
 
-## PL {auto-animate="true"}
+## PL - NGS - Arbetsflöden
 
-![](images\pl_rd_1.png){.lightbox width="400"}
+::: columns
+::: {.column width="50%"}
+![](images\pl_arbetsflöde\pl_4_3.png)
+:::
 
--   Lite text kan vi ha också
--   Ocks här
+::: {.column width="50%"}
+-   Lab
+    -   [Biblioteks preparation]{style="color:blue;"}
+-   Bioinformatik och tolkning
+    -   [Patologi och sällsynta diagnoser]{style="color:green;"}
+    -   [Mikrobiologi]{style="color:yellow;"}
+:::
+:::
+
+## PL - gemensamt
+
+![](images\pl_gemensamt\pl_gemensamt_2.png)
+
+## PL - gemensamt
+
+![](images\pl_gemensamt\pl_gemensamt_3.png)
 
 ## Sekvensering, nätverk, lagring och beräkningsresurser
 
-![](images\networks.drawio_no_legend.png)
+
+![](images\networks2\networks2.drawio.png)
+
+## Sekvensering, nätverk, lagring och beräkningsresurser
+
+
+![](images\networks2\networks4.drawio.png)
+
+## 
+
+
+![](images\networks2\networks7.drawio.png)
+
+## 
+
+
+![](images\networks2\networks8.drawio.png)
+
+## 
+
+
+![](images\networks2\networks10.drawio.png)
+
+<!--
+
+![](images\networks.drawio_no_legend_2.png)
+
+
+
+![](images\networks\snabbt_nätverk.drawio_no_legend.png)
+-->
+## Beräkings resurser - High Performance computing Cluster (HPC)
+
+![](images\HPC-schematic.png)
+
+## Beräkings resurser - Moln beräkning (AWS)
+
+![](images\Cloud_computing.png)
 
 ## PL ingår i nätverket Genome Medicine sweden (GMS)
 
 Parallelt med Scilife-lab nätverk
 
 ::: columns
-::: {.column width="20%"}
-![](images\SciLifeLab_CGnodes_GMS_GMCs_1.png){width="200"}
-:::
-
 ::: {.column width="40%"}
-```{r}
-# code to produce the graph above without arrow annotations. 
-library('plotly')
-
-df <- data.frame(
-  labels = c(
-    'GMS/sciLifeLab', 
-    'PL_L_GMC', 'CG_L', 
-    'GMC_2', 'CG_2', 
-    'GMC_3', 'CG_3', 
-    'GMC_4', 'CG_4',
-    'GMC_5', 'CG_5', 
-    'GMC_6', 'CG_6'
-  ), 
-  parents = c (
-    '',
-    'GMS/sciLifeLab', 'PL_L_GMC',
-    'GMS/sciLifeLab', 'GMC_2', 
-    'GMS/sciLifeLab', 'GMC_3', 
-    'GMS/sciLifeLab', 'GMC_4', 
-    'GMS/sciLifeLab', 'GMC_5', 
-    'GMS/sciLifeLab', 'GMC_6'
-  ),
-  values = c(
-    12,
-    2, 2, 
-    2, 2, 
-    2, 2,
-    2, 2,
-    2, 2,
-    2, 2
-  )
-)
-
-plot_ly(df,
-        labels = ~labels,
-        parents =  ~parents,
-        values = ~values,
-        type = 'sunburst',
-        branchvalues='total')
-
-```
+![](images\pl_GMC_1.png)
 :::
 
-::: {.column width="40%"}
--   ScilifeLab
-    -   Clinical Genomic (CG) key services
--   GMS
-    -   Genomisk Medicin Centrum (GMC)
+::: {.column width="60%"}
+-   Clinical Genomic (CG) key services
+-   Genomisk Medicin Centrum (GMC)
 :::
 :::
-
-```{=html}
-<!--
-![](images\pl_rd_2.png)
--->
-```
-## PL ingår i nätverket Genome Medicine sweden (GMS) 2
-
-Som har ett systernätverk i SciLifeLabs Clinical Genomics noder
-
-```{r}
-# code to produce the graph above without arrow annotations. 
-library('plotly')
-
-df <- data.frame(
-  labels = c(
-    'GMS/sciLifeLab', 
-    'PL_L_GMC', 'CG_L', 
-    'GMC_2', 'CG_2', 
-    'GMC_3', 'CG_3', 
-    'GMC_4', 'CG_4',
-    'GMC_5', 'CG_5', 
-    'GMC_6', 'CG_6'
-  ), 
-  parents = c (
-    '',
-    'GMS/sciLifeLab', 'PL_L_GMC',
-    'GMS/sciLifeLab', 'GMC_2', 
-    'GMS/sciLifeLab', 'GMC_3', 
-    'GMS/sciLifeLab', 'GMC_4', 
-    'GMS/sciLifeLab', 'GMC_5', 
-    'GMS/sciLifeLab', 'GMC_6'
-  ),
-  values = c(
-    12,
-    2, 2, 
-    2, 2, 
-    2, 2,
-    2, 2,
-    2, 2,
-    2, 2
-  )
-)
-
-plot_ly(df,
-        labels = ~labels,
-        parents =  ~parents,
-        values = ~values,
-        type = 'sunburst',
-        branchvalues='total')
-
-```
-
-## NGP ingår i ett nätverk
-
-![](images\pl_ngp_ehds_1.png)
-
-
-
 
 
 
 ## National genomics Platform (NGP)
 
-Navet i GMS inbördes samverkan, men också med andra instanser
+Navet i GMS inbördes samverkan
 
-```{r}
-# code to produce the graph above without arrow annotations. 
-library('plotly')
+![](images\pl_NGP_1.png)
 
-df <- data.frame(
-  labels = c(
-    'NGP',
-    'PL_L_GMC',
-    'GMC_2',
-    'GMC_3',
-    'GMC_4',
-    'GMC_5',
-    'GMC_6'
-  ), 
-  parents = c (
-    '',
-    'NGP',
-    'NGP',
-    'NGP',
-    'NGP',
-    'NGP',
-    'NGP'
-  ),
-  values = c(
-    12,
-    2,  
-    2,
-    2,
-    2,
-    2,
-    2
-  )
-)
+## NGP - mer detaljerat
 
-plot_ly(df,
-        labels = ~labels,
-        parents =  ~parents,
-        values = ~values,
-        type = 'sunburst',
-        branchvalues='total')
-
-```
-
-## NGP
-
-Navet i GMS samverkan
+Också samverkan med andra instanser
 
 ![](images\NGPÖversikt_1.png)
 
-## NGP
+## Vision - NGP ingår i ett Europeiskt datadelningsnätverk
+
+![](images\pl_ngp_ehds_1.png)
+
+## NGP kör i huvudsak workflows
 
 -   På NGP commander (NGPc) installeras det workflows. Huvudsakligen baserat på Workflow management systemet Nextflow.
 -   Vad är ett workflow?
 
-## PL - Sällsynta diagnoser {auto-animate="true"}
+## Mina uppgifter
 
-![](images\rd_1.png)
+- Lasta upp sekvensdata från hårdiskar och klinisk data från LIS till NGP
+  - Det som finns lagrat
+  - Automatik för framtiden
+- Få rardisease pipelinen att köra 
+  - Med test-data på Dardell
+  - Med vår data på NGP/GRID
+- Hjälpa till som bioinformatiker
+  - Mikrobilellt övervaknings verktyg på NGP
 
 ## Sällsynta diagnoser - workflow
 
-![](images\rd_1.png){.absolute top="0" left="0" widtdh="2000"}
+::: columns
+::: {.column width="80%"}
+![](images\Workflow.drawio_1_a.png)
+:::
 
-![](images\Workflow.drawio_1_a.png){.absolute top="200" left="0" width="1000"}
+::: {.column width="20%"}
+![](images\pl_arbetsflöde\pl_4_3_rd.png)
+:::
+:::
 
-## Hur var kan ett sådant/sådana arbetsflöde(n) köras?
-## Hårdvara - HPC
+## Sällsynta diagnoser - workflow - hur det skulle kunna se ut
 
-![](images\HPC-schematic.png)
-https://wvuhpc.github.io/Introduction-HPC/aio/index.html
 
-## Hårdvara - Moln beräkning (AWS)
 
-![](images\Cloud_computing.png)
 
-## Jobbschemaläggare och resurshanterare
-- slurm
-- altair grid engine
+::: columns
+::: {.column width="80%"}
+![](images\raredisease_metromap_dark.png)
 
-## vad kan versionskontrolleras?
+:::
 
-::: columns 
-::: {.column width="50%" .incremental}
+::: {.column width="20%"}
+![](images\pl_arbetsflöde\pl_4_3_rd.png)
+
+:::
+:::
+
+
+
+## Hur var kan ett sådant/sådana arbetsflöde(n) utvecklas och köras?
+
+- Samarbetsbaserad och versionskontrollerad utveckling
+- Friktionslöst att köra på olika system
+- Skalerbart - HPC, moln
+- Hjälpsystem för hanteringen av komplexiteten hos ett arbetsflöde
+
+## Workflow managment systems, Seqera, Nexflow summarized
+
+![](images\nextflow_summary\nextflow_summary_0.png)
+
+
+## Workflow managment systems, Seqera, Nexflow summarized
+
+![](images\nextflow_summary\nextflow_summary_1.png)
+
+## Vad kan versionskontrolleras?
+
+::: columns
+::: {.column width="50%"}
 ![](images\text_file_verson_controlling.png)
 :::
 
-::: {.column width="50%" .incremental}
-
-:::
-:::
-
-## vad kan versionskontrolleras?
-
-::: columns 
-::: {.column width="50%" .incremental}
-![](images\text_file_verson_controlling.png)
-:::
-
-::: {.column width="50%" .incremental}
+::: {.column  width="50%"}
 ![](images\folder_verson_controlling.png)
 :::
 :::
 
-
-
-
 ## Git ett system för versionskontrollering
-https://www.neonscience.org/resources/learning-hub/tutorials/github-git-add
+
 
 ![](images\git_1.png)
 
 ## Kollektivt versionskontrollerad mjukvaruutveckling A
 
-https://images.app.goo.gl/ERfAufK2HQMuXEkn9
 
 ![](images\github_1.png)
 
-## Kollektivt versionskontrollerad mjukvaruutveckling B
+## Några Github förvaringsplatser/repositories...
 
-## Program utveckalde i en specifik hårdvarukonfiguration skall kunna köras i vilken som helst annan
+- [För den här presentationen](https://github.com/hrydbeck/PL_NGP_och_Seqera)
+- [För bwa-mem2](https://github.com/bwa-mem2/bwa-mem2)
+- [Illumina Manta](https://github.com/Illumina/manta)
 
+## Köra var som helst
+
+Mjukvara förpackas med nödvändiga komponenter (dependancies) från OS och programmeringsmiljö i "containers"
+
+::: columns
+::: {.column width="30%"}
+![](images\containers_1.png)
+:::
+
+::: {.column width="30%"}
+
+
+Från programspråk (Package managers):
+
+  -   Conda
+  -   PyPI
+
+:::
+
+::: {.column width="30%"}
+
+Från OS (Container engines):
+
+  -   Docker
+  -   Singularity
+  -   Wave
+
+:::
+
+:::
+
+## Workflow managment systems, Seqera, Nexflow summarized
+
+![](images\nextflow_summary\nextflow_summary_2.png)
+
+## Make and run singularity container on virtual server
+
+Gå till [Seqera containers](https://seqera.io/containers/) och få en container för ett program.Tex bwa-mem2.
+
+community.wave.seqera.io/library/bwa-mem2:b477244b26cdcee4
+
+```
+wave --conda bwa 
+```
+
+## HPC - cloud - Jobbschemaläggare och resurshanterare
 
 
 ::: columns
-::: {.column}
+::: {.column width="50%"}
+![](images\pl_NGP_2.png)
+:::
 
-
-
-![](images\containers_1.png){width="300"}
+::: {.column width="50%"}
+-   Slurm
+-   Altair grid engine
+-   Kubernetes
+-   ...
 
 :::
-:::{.column}
-
-Mjukvaru utvecking ersätts av container utveckling
-
-Container hanterings system:
-
-- Docker
-- Singularity
 :::
-:::
+
+
+## Workflow managment systems, Seqera, Nexflow summarized
+
+![](images\nextflow_summary\nextflow_summary_3.png)
+
+## Nextflow är ett programmeringsspråk
+
+
 
 ## Arbetssflödes hanteringsprogram
 
-- Nextflow
+Nextflow
 
 ![](images\nextflow_1.PNG){width="700"}
+
+## nf-core modules
+
+[nf-core modules](https://nf-co.re/modules/){preview-link="true"}
+
+## Nextflow, nf-core pipelines are stored on Github
+
+[Nextflow, nf-core pipelines are stored on Github](https://github.com/nf-core)
+
+## Workflow managment systems, Seqera, Nexflow summarized
+
+![](images\nextflow_summary\nextflow_summary_4.png)
+
+## Workflow managment systems, Seqera, Nexflow summarized
+
+![](images\nextflow_summary\nextflow_summary_5.png)
+
+## Nextflow from command line
+
 
 ## Seqera platform
 
+Also put in an image of file tree to show that getting an overview of all the files is messy from command line
+
+![](images\seqera_1.png){width="700"}
 
 
-Also put in an image of file tree to show that geting an overview of all the files is messy form commland line
 
-![](images\seqera_1.png)
-![](images\nextflow_1.PNG){width="700"}
+
+
+
+
 
 
 
 ## Excalidraw
 
 [Excalidraw](https://excalidraw.com/){preview-link="true"}
-
-
 
 ## Code
 
