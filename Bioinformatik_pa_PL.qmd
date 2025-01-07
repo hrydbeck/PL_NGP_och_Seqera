@@ -15,9 +15,21 @@ format:
 editor: visual
 ---
 
-## [Precisionsmedicinskt Laboratorium (PL) - service]{style="color:orange;"}
+## Bioinformatik på Precisionsmedicinskt Laboratorium (PL) (från mitt perspektiv)
 
-::::: columns
+-   Lasta upp sekvensdata från hårdiskar och klinisk data från LIS till NGP
+    -   Det som finns lagrat
+    -   Automatik för framtiden
+-   Få på plats ett bioinformatiskt arbetsflöde för identifiera och annotera genetiska varianter utifrån helgenoms sekvensdata.
+    -   Med test-data på Dardell
+    -   Med vår data på NGP/GRID
+-   Hjälpa till som bioinformatiker
+    -   Mikrobilellt övervaknings verktyg på NGP
+    
+## [PL]{style="color:orange;"}  - sammanhang och funktion inom RÖ
+
+
+::: columns
 ::: {.column width="70%"}
 ![](images\pl_summary\pl_3_2.png){width="400"}
 :::
@@ -25,11 +37,12 @@ editor: visual
 ::: {.column width="30%"}
 -   [**Biologiskt prov**]{style="color:blue;"}
 :::
-:::::
+:::
 
-## [Precisionsmedicinskt Laboratorium (PL) - service]{style="color:orange;"}
+## [PL]{style="color:orange;"} - sammanhang och funktion inom RÖ
 
-::::: columns
+
+::: columns
 ::: {.column width="70%"}
 ![](images\pl_summary\pl_3_3.png){width="400"}
 :::
@@ -39,11 +52,11 @@ editor: visual
 
 -   [**Variant(er)**]{style="color:green;"}
 :::
-:::::
+:::
 
-## [Precisionsmedicinskt Laboratorium (PL) - service]{style="color:orange;"}
+## [PL]{style="color:orange;"} - sammanhang och funktion inom RÖ
 
-::::: columns
+::: columns
 ::: {.column width="70%"}
 ![](images\pl_summary\pl_3_4.png){width="400"}
 :::
@@ -55,7 +68,7 @@ editor: visual
 
 -   [**Resistensgener**]{style="color:orange;"}
 :::
-:::::
+:::
 
 ## PL- Next Genaration Sequencing (NGS) {auto-animate="true"}
 
@@ -63,7 +76,7 @@ editor: visual
 
 ## PL - NGS - Arbetsflöden
 
-::::: columns
+::: columns
 ::: {.column width="50%"}
 ![](images\pl_arbetsflöde\pl_4_3.png)
 :::
@@ -71,11 +84,12 @@ editor: visual
 ::: {.column width="50%"}
 -   Lab
     -   [Biblioteks preparation]{style="color:blue;"}
+    -   [Införing av klinisk data i LIS]{style="color:blue;"}
 -   Bioinformatik och tolkning
     -   [Patologi och sällsynta diagnoser]{style="color:green;"}
     -   [Mikrobiologi]{style="color:yellow;"}
 :::
-:::::
+:::
 
 ## PL - gemensamt
 
@@ -115,7 +129,6 @@ editor: visual
 ![](images\networks\snabbt_nätverk.drawio_no_legend.png)
 -->
 ```
-
 ## Beräkings resurser - High Performance computing Cluster (HPC)
 
 ![](images\HPC-schematic.png)
@@ -124,20 +137,23 @@ editor: visual
 
 ![](images\Cloud_computing.png)
 
-## PL ingår i nätverket Genome Medicine sweden (GMS)
+## PL - sammanhang och funktion inom GMS
+
 
 Parallelt med Scilife-lab nätverk
 
-::::: columns
+::: columns
 ::: {.column width="40%"}
 ![](images\pl_GMC_1.png)
 :::
 
 ::: {.column width="60%"}
--   Clinical Genomic (CG) key services
--   Genomisk Medicin Centrum (GMC)
+- Scilife-lab
+  -   CG - Clinical Genomic  key services
+- Genome Mediciene Sweden
+  -   GMC - Genomisk Medicin Centrum 
 :::
-:::::
+:::
 
 ## National genomics Platform (NGP)
 
@@ -167,18 +183,16 @@ Också samverkan med andra instanser
 
 ## Upplastning av data till NGP
 
-::::: columns
+::: columns
 ::: {.column width="70%"}
-
 ![](images\upload_data\pl_ngp_purpose_10.drawio.png)
 :::
+
 ::: {.column width="30%"}
-
-* \* unix and shell scripts
-* ** Iris-NGP
-
+-   \* unix and shell scripts
+-   \*\* Iris-NGP
 :::
-:::::
+:::
 
 ## Vision - NGP ingår i ett Europeiskt datadelningsnätverk
 
@@ -189,20 +203,10 @@ Också samverkan med andra instanser
 -   På NGP commander (NGPc) installeras det workflows. Huvudsakligen baserat på Workflow management systemet Nextflow.
 -   Vad är ett workflow?
 
-## Mina uppgifter
-
--   Lasta upp sekvensdata från hårdiskar och klinisk data från LIS till NGP
-    -   Det som finns lagrat
-    -   Automatik för framtiden
--   Få rardisease pipelinen att köra
-    -   Med test-data på Dardell
-    -   Med vår data på NGP/GRID
--   Hjälpa till som bioinformatiker
-    -   Mikrobilellt övervaknings verktyg på NGP
 
 ## Sällsynta diagnoser - workflow
 
-::::: columns
+::: columns
 ::: {.column width="80%"}
 ![](images\Workflow.drawio_1_a.png)
 :::
@@ -210,11 +214,11 @@ Också samverkan med andra instanser
 ::: {.column width="20%"}
 ![](images\pl_arbetsflöde\pl_4_3_rd.png)
 :::
-:::::
+:::
 
 ## Sällsynta diagnoser - workflow - hur det skulle kunna se ut
 
-::::: columns
+::: columns
 ::: {.column width="80%"}
 ![](images\raredisease_metromap_dark.png)
 :::
@@ -222,7 +226,7 @@ Också samverkan med andra instanser
 ::: {.column width="20%"}
 ![](images\pl_arbetsflöde\pl_4_3_rd.png)
 :::
-:::::
+:::
 
 ## Hur var kan ett sådant/sådana arbetsflöde(n) utvecklas och köras?
 
@@ -241,7 +245,7 @@ Också samverkan med andra instanser
 
 ## Vad kan versionskontrolleras?
 
-::::: columns
+::: columns
 ::: {.column width="50%"}
 ![](images\text_file_verson_controlling.png)
 :::
@@ -249,7 +253,7 @@ Också samverkan med andra instanser
 ::: {.column width="50%"}
 ![](images\folder_verson_controlling.png)
 :::
-:::::
+:::
 
 ## Git ett system för versionskontrollering
 
@@ -269,7 +273,7 @@ Också samverkan med andra instanser
 
 Mjukvara förpackas med nödvändiga komponenter (dependancies) från OS och programmeringsmiljö i "containers"
 
-:::::: columns
+::: columns
 ::: {.column width="30%"}
 ![](images\containers_1.png)
 :::
@@ -288,7 +292,7 @@ Från OS (Container engines):
 -   Singularity
 -   Wave
 :::
-::::::
+:::
 
 ## Workflow managment systems, Seqera, Nexflow summarized
 
@@ -306,7 +310,7 @@ wave --conda bwa
 
 ## HPC - cloud - Jobbschemaläggare och resurshanterare
 
-::::: columns
+::: columns
 ::: {.column width="50%"}
 ![](images\pl_NGP_2.png)
 :::
@@ -317,7 +321,7 @@ wave --conda bwa
 -   Kubernetes
 -   ...
 :::
-:::::
+:::
 
 ## Workflow managment systems, Seqera, Nexflow summarized
 
