@@ -15,15 +15,15 @@ format:
 editor: visual
 ---
 
-## Bioinformatik på Precisionsmedicinskt Laboratorium (PL) (från mitt perspektiv)
+## Centrala uppgifter för mig, NGS och klinisk data
 
--   Lasta upp sekvensdata från hårdiskar och klinisk data från LIS till NGP
+-   Samla in och lasta upp från hårdiskar och LIS till NGP
     -   Det som finns lagrat
     -   Automatik för framtiden
--   Få på plats ett bioinformatiskt arbetsflöde för identifiera och annotera genetiska varianter utifrån helgenoms sekvensdata.
-    -   Med test-data på Dardell
+-   Arbetsflöde för identifiera och annotera genetiska varianter utifrån WGS data.
+    -   Med test-data på HPC för ikke sensitiv data
     -   Med vår data på NGP/GRID
--   Hjälpa till som bioinformatiker
+-   Välja ut lämpliga program och scripta
     -   Mikrobilellt övervaknings verktyg på NGP
     
 ## [PL]{style="color:orange;"}  - sammanhang och funktion inom RÖ
@@ -69,6 +69,18 @@ editor: visual
 -   [**Resistensgener**]{style="color:orange;"}
 :::
 :::
+
+## Sekvenserings- och klinisk data
+
+![](images\upload_data\pl_ngp_purpose_3.drawio.png)
+
+## Sekvenserings- och klinisk data
+
+![](images\upload_data\pl_ngp_purpose_5.drawio.png)
+
+## Sekvenserings- och klinisk data
+
+![](images\upload_data\pl_ngp_purpose_7.drawio.png)
 
 ## PL- Next Genaration Sequencing (NGS) {auto-animate="true"}
 
@@ -155,6 +167,10 @@ Parallelt med Scilife-lab nätverk
 :::
 :::
 
+## Vad är GMS
+
+GMS och Vinnova
+
 ## National genomics Platform (NGP)
 
 Navet i GMS inbördes samverkan
@@ -167,15 +183,7 @@ Också samverkan med andra instanser
 
 ![](images\NGPÖversikt_1.png)
 
-## GMS och Vinnova
 
-## Upplastning av data till NGP
-
-![](images\upload_data\pl_ngp_purpose_3.drawio.png)
-
-## Upplastning av data till NGP
-
-![](images\upload_data\pl_ngp_purpose_5.drawio.png)
 
 ## Upplastning av data till NGP
 

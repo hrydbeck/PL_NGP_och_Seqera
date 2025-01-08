@@ -339,20 +339,20 @@
 
   <p class="date">2025-01-07</p>
 </section>
-<section id="bioinformatik-på-precisionsmedicinskt-laboratorium-pl-från-mitt-perspektiv" class="slide level2">
-<h2>Bioinformatik på Precisionsmedicinskt Laboratorium (PL) (från mitt perspektiv)</h2>
+<section id="centrala-uppgifter-för-mig-ngs-och-klinisk-data" class="slide level2">
+<h2>Centrala uppgifter för mig, NGS och klinisk data</h2>
 <ul>
-<li>Lasta upp sekvensdata från hårdiskar och klinisk data från LIS till NGP
+<li>Samla in och lasta upp från hårdiskar och LIS till NGP
 <ul>
 <li>Det som finns lagrat</li>
 <li>Automatik för framtiden</li>
 </ul></li>
-<li>Få på plats ett bioinformatiskt arbetsflöde för identifiera och annotera genetiska varianter utifrån helgenoms sekvensdata.
+<li>Arbetsflöde för identifiera och annotera genetiska varianter utifrån WGS data.
 <ul>
-<li>Med test-data på Dardell</li>
+<li>Med test-data på HPC för ikke sensitiv data</li>
 <li>Med vår data på NGP/GRID</li>
 </ul></li>
-<li>Hjälpa till som bioinformatiker
+<li>Välja ut lämpliga program och scripta
 <ul>
 <li>Mikrobilellt övervaknings verktyg på NGP</li>
 </ul></li>
@@ -397,6 +397,18 @@
 </div>
 </div>
 </section>
+<section id="sekvenserings--och-klinisk-data" class="slide level2">
+<h2>Sekvenserings- och klinisk data</h2>
+
+<img data-src="images\upload_data\pl_ngp_purpose_3.drawio.png" class="r-stretch"></section>
+<section id="sekvenserings--och-klinisk-data-1" class="slide level2">
+<h2>Sekvenserings- och klinisk data</h2>
+
+<img data-src="images\upload_data\pl_ngp_purpose_5.drawio.png" class="r-stretch"></section>
+<section id="sekvenserings--och-klinisk-data-2" class="slide level2">
+<h2>Sekvenserings- och klinisk data</h2>
+
+<img data-src="images\upload_data\pl_ngp_purpose_7.drawio.png" class="r-stretch"></section>
 <section id="pl--next-genaration-sequencing-ngs" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">PL- Next Genaration Sequencing (NGS)</h2>
 <p><a href="images\pl_arbetsflöde\pl_4_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="images\pl_arbetsflöde\pl_4_2.png" width="400"></a></p>
@@ -502,16 +514,8 @@
 <section id="upplastning-av-data-till-ngp" class="slide level2">
 <h2>Upplastning av data till NGP</h2>
 
-<img data-src="images\upload_data\pl_ngp_purpose_3.drawio.png" class="r-stretch"></section>
-<section id="upplastning-av-data-till-ngp-1" class="slide level2">
-<h2>Upplastning av data till NGP</h2>
-
-<img data-src="images\upload_data\pl_ngp_purpose_5.drawio.png" class="r-stretch"></section>
-<section id="upplastning-av-data-till-ngp-2" class="slide level2">
-<h2>Upplastning av data till NGP</h2>
-
 <img data-src="images\upload_data\pl_ngp_purpose_7.drawio.png" class="r-stretch"></section>
-<section id="upplastning-av-data-till-ngp-3" class="slide level2">
+<section id="upplastning-av-data-till-ngp-1" class="slide level2">
 <h2>Upplastning av data till NGP</h2>
 <div class="columns">
 <div class="column" style="width:70%;">
@@ -1164,7 +1168,7 @@
       }
     });
     </script>
-    <script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","loop":false,"selector":".lightbox"});
+    <script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","loop":false});
     window.onload = () => {
       lightboxQuarto.on('slide_before_load', (data) => {
         const { slideIndex, slideNode, slideConfig, player, trigger } = data;
