@@ -103,6 +103,23 @@ editor: visual
 :::
 :::
 
+## Vad är ett arbetsflöde?
+
+![](images\arbetsflöde_definition.drawio.png)
+
+  
+## Vad är ett arbetsflöde?
+
+![](images\arbetsflöde_definition.drawio.png)
+
+På PL handlar det om:
+
+- Extrahera
+  - fysiskt material ur ett annant
+  - information ut data
+  - kunskap ur information
+  
+
 ## PL - gemensamt
 
 ![](images\pl_gemensamt\pl_gemensamt_2.png)
@@ -149,6 +166,15 @@ editor: visual
 
 ![](images\Cloud_computing.png)
 
+
+## Pl ingår in nätverket GMS (Genome Medicine Sweden)
+
+
+- Startade 2018 som ett samverkans projekt mellan regionerna 
+  I huvudsak
+- Pengar från Sveriges innovation myndighet - Vinnova
+  - Senare också från ett Vinnova strategiska-innovationsprogram: Swelife
+
 ## PL - sammanhang och funktion inom GMS
 
 
@@ -167,9 +193,6 @@ Parallelt med Scilife-lab nätverk
 :::
 :::
 
-## Vad är GMS
-
-GMS och Vinnova
 
 ## National genomics Platform (NGP)
 
