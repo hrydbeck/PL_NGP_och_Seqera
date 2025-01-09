@@ -13,7 +13,7 @@
 <link href="Bioinformatik_pa_PL_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.555">
 
-  <meta name="dcterms.date" content="2025-01-08">
+  <meta name="dcterms.date" content="2025-01-09">
   <title>PL, NGP och Nextflow</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -337,7 +337,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">2025-01-08</p>
+  <p class="date">2025-01-09</p>
 </section>
 <section id="centrala-uppgifter-för-mig-ngs-och-klinisk-data" class="slide level2">
 <h2>Centrala uppgifter för mig, NGS och klinisk data</h2>
@@ -420,16 +420,12 @@
 <p><img data-src="images\pl_arbetsflöde\pl_4_3.png"></p>
 </div><div class="column" style="width:50%;">
 <ul>
-<li>Lab
-<ul>
-<li><span style="color:blue;">Biblioteks preparation</span></li>
-<li><span style="color:blue;">Införing av klinisk data i LIS</span></li>
-</ul></li>
-<li>Bioinformatik och tolkning
-<ul>
-<li><span style="color:green;">Patologi och sällsynta diagnoser</span></li>
-<li><span style="color:yellow;">Mikrobiologi</span></li>
-</ul></li>
+<li><p>Lab</p>
+<p><span style="color:blue;">-</span> Biblioteks preparation</p>
+<p><span style="color:blue;">-</span> Införing av klinisk data i LIS</p></li>
+<li><p>Bioinformatik och tolkning</p>
+<p><span style="color:green;">-</span> Patologi och sällsynta diagnoser</p>
+<p><span style="color:yellow;">-</span> Mikrobiologi</p></li>
 </ul>
 </div>
 </div>
@@ -551,11 +547,13 @@
 </ul>
 </div>
 </div>
-</section>
-<section id="vision---ngp-ingår-i-ett-europeiskt-datadelningsnätverk" class="slide level2">
-<h2>Vision - NGP ingår i ett Europeiskt datadelningsnätverk</h2>
+<!--
+## Vision - NGP ingår i ett Europeiskt datadelningsnätverk
 
-<img data-src="images\pl_ngp_ehds_1.png" class="r-stretch"></section>
+![](images\pl_ngp_ehds_1.png)
+
+-->
+</section>
 <section id="ngp-kör-i-huvudsak-workflows" class="slide level2">
 <h2>NGP kör i huvudsak workflows</h2>
 <ul>
@@ -590,6 +588,19 @@
 <li>Friktionslöst att köra på olika system</li>
 <li>Skalerbart - HPC, moln</li>
 <li>Hjälpsystem för hanteringen av komplexiteten hos ett arbetsflöde</li>
+</ul>
+</section>
+<section id="arbetsflödes-hanteringsprogram" class="slide level2">
+<h2>Arbetsflödes hanteringsprogram</h2>
+<ul>
+<li><p>Inte bara ett verktyg för att köra men också script språk för att utveckla</p></li>
+<li><p>Behöver förutom att bygga kedjor av program också kunna samarbeta med:</p>
+<ul>
+<li>Version hanterings program</li>
+<li>Container motorer</li>
+<li>HPC jobbschemaläggare och resurshanterare och Moln tjänster</li>
+</ul>
+<p>Vi skall se mer på det</p></li>
 </ul>
 </section>
 <section id="workflow-managment-systems-seqera-nexflow-summarized" class="slide level2">
@@ -1192,7 +1203,7 @@
       }
     });
     </script>
-    <script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","selector":".lightbox"});
+    <script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox","loop":false,"openEffect":"zoom"});
     window.onload = () => {
       lightboxQuarto.on('slide_before_load', (data) => {
         const { slideIndex, slideNode, slideConfig, player, trigger } = data;

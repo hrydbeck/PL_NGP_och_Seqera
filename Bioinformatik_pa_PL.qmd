@@ -95,11 +95,15 @@ editor: visual
 
 ::: {.column width="50%"}
 -   Lab
-    -   [Biblioteks preparation]{style="color:blue;"}
-    -   [Införing av klinisk data i LIS]{style="color:blue;"}
+
+    [-]{style="color:blue;"} Biblioteks preparation
+    
+    [-]{style="color:blue;"} Införing av klinisk data i LIS
 -   Bioinformatik och tolkning
-    -   [Patologi och sällsynta diagnoser]{style="color:green;"}
-    -   [Mikrobiologi]{style="color:yellow;"}
+    
+    [-]{style="color:green;"}   Patologi och sällsynta diagnoser
+    
+    [-]{style="color:yellow;"}   Mikrobiologi
 :::
 :::
 
@@ -225,9 +229,14 @@ Också samverkan med andra instanser
 :::
 :::
 
+```{=html}
+<!--
 ## Vision - NGP ingår i ett Europeiskt datadelningsnätverk
 
 ![](images\pl_ngp_ehds_1.png)
+
+-->
+```
 
 ## NGP kör i huvudsak workflows
 
@@ -265,6 +274,18 @@ Också samverkan med andra instanser
 -   Friktionslöst att köra på olika system
 -   Skalerbart - HPC, moln
 -   Hjälpsystem för hanteringen av komplexiteten hos ett arbetsflöde
+
+## Arbetsflödes hanteringsprogram
+
+- Inte bara ett verktyg för att köra men också script språk för att utveckla
+
+- Behöver förutom att bygga kedjor av program också kunna samarbeta med:
+
+  - Version hanterings program
+  - Container motorer
+  - HPC jobbschemaläggare och resurshanterare och Moln tjänster
+  
+  Vi skall se mer på det
 
 ## Workflow managment systems, Seqera, Nexflow summarized
 
