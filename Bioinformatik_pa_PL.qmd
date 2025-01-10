@@ -21,11 +21,38 @@ editor: visual
     -   Det som finns lagrat
     -   Automatik för framtiden
 -   Arbetsflöde för identifiera och annotera genetiska varianter utifrån WGS data.
-    -   Med test-data på HPC för ikke sensitiv data
+    -   Med test-data på **HPC** för ikke sensitiv data
     -   Med vår data på NGP/GRID
--   Välja ut lämpliga program och scripta
-    -   Mikrobilellt övervaknings verktyg på NGP
+-   Mikrobilellt övervaknings verktyg på NGP
+    - komplettera existerande system
+    - Välja ut lämpliga program och scripta
     
+ 
+
+## Beräkings resurser - High Performance computing Cluster (HPC)
+
+![](images\HPC-schematic.png)
+
+## Beräkings resurser - Moln beräkning (AWS)
+
+![](images\Cloud_computing.png)
+
+## HPC - cloud - Jobbschemaläggare och resurshanterare
+
+::: columns
+::: {.column width="50%"}
+![](images\pl_NGP_2.png)
+:::
+
+::: {.column width="50%"}
+-   Slurm
+-   Altair grid engine
+-   Kubernetes
+-   ...
+:::
+:::
+
+
 ## [PL]{style="color:orange;"}  - sammanhang och funktion inom RÖ
 
 
@@ -162,13 +189,6 @@ På PL handlar det om:
 ![](images\networks\snabbt_nätverk.drawio_no_legend.png)
 -->
 ```
-## Beräkings resurser - High Performance computing Cluster (HPC)
-
-![](images\HPC-schematic.png)
-
-## Beräkings resurser - Moln beräkning (AWS)
-
-![](images\Cloud_computing.png)
 
 
 ## Pl ingår in nätverket GMS (Genome Medicine Sweden)
@@ -238,10 +258,11 @@ Också samverkan med andra instanser
 -->
 ```
 
-## NGP kör i huvudsak workflows
+## NGPc är i huvudsak tänkt att köra workflows
 
--   På NGP commander (NGPc) installeras det workflows. Huvudsakligen baserat på Workflow management systemet Nextflow.
--   Vad är ett workflow?
+- Huvudsakligen baserat på Workflow management systemet Nextflow.
+- Ett av de prioriterade är nf-core/raredisease
+- Utför det som önskas av vår raredisease grupp
 
 
 ## Sällsynta diagnoser - workflow
@@ -256,7 +277,7 @@ Också samverkan med andra instanser
 :::
 :::
 
-## Sällsynta diagnoser - workflow - hur det skulle kunna se ut
+## Sällsynta diagnoser - arbetsflöde - utvecklat av nf-core
 
 ::: columns
 ::: {.column width="80%"}
@@ -268,14 +289,14 @@ Också samverkan med andra instanser
 :::
 :::
 
-## Hur var kan ett sådant/sådana arbetsflöde(n) utvecklas och köras?
+## Det är inte enkelt att utveckla och köra bioinformatiska arbetsflöden
 
 -   Samarbetsbaserad och versionskontrollerad utveckling
 -   Friktionslöst att köra på olika system
 -   Skalerbart - HPC, moln
 -   Hjälpsystem för hanteringen av komplexiteten hos ett arbetsflöde
 
-## Arbetsflödes hanteringsprogram
+## Arbetsflödes hanterings program
 
 - Inte bara ett verktyg för att köra men också script språk för att utveckla
 
@@ -287,11 +308,11 @@ Också samverkan med andra instanser
   
   Vi skall se mer på det
 
-## Workflow managment systems, Seqera, Nexflow summarized
+## Arbetsflödes hanterings program, Nextflow - del 1
 
 ![](images\nextflow_summary\nextflow_summary_0.png)
 
-## Workflow managment systems, Seqera, Nexflow summarized
+## Arbetsflödes hanterings program, Nextflow - del 2
 
 ![](images\nextflow_summary\nextflow_summary_1.png)
 
@@ -321,6 +342,12 @@ Också samverkan med andra instanser
 -   [För bwa-mem2](https://github.com/bwa-mem2/bwa-mem2)
 -   [Illumina Manta](https://github.com/Illumina/manta)
 
+
+
+## Arbetsflödes hanterings program, Nextflow - del 3
+
+![](images\nextflow_summary\nextflow_summary_2.png)
+
 ## Köra var som helst
 
 Mjukvara förpackas med nödvändiga komponenter (dependancies) från OS och programmeringsmiljö i "containers"
@@ -346,10 +373,6 @@ Från OS (Container engines):
 :::
 :::
 
-## Workflow managment systems, Seqera, Nexflow summarized
-
-![](images\nextflow_summary\nextflow_summary_2.png)
-
 ## Make and run singularity container on virtual server
 
 Gå till [Seqera containers](https://seqera.io/containers/) och få en container för ett program.Tex bwa-mem2.
@@ -360,30 +383,16 @@ community.wave.seqera.io/library/bwa-mem2:b477244b26cdcee4
 wave --conda bwa 
 ```
 
-## HPC - cloud - Jobbschemaläggare och resurshanterare
 
-::: columns
-::: {.column width="50%"}
-![](images\pl_NGP_2.png)
-:::
-
-::: {.column width="50%"}
--   Slurm
--   Altair grid engine
--   Kubernetes
--   ...
-:::
-:::
-
-## Workflow managment systems, Seqera, Nexflow summarized
+## Arbetsflödes hanterings program, Nextflow - del 4
 
 ![](images\nextflow_summary\nextflow_summary_3.png)
 
 ## Nextflow är ett programmeringsspråk
 
-## Arbetssflödes hanteringsprogram
+## Nextflow är ett orkestrerings verktyg
 
-Nextflow
+Förutom orkestrering av de ingående programmen så kan man interagera med...
 
 ![](images\nextflow_1.PNG){width="700"}
 
@@ -395,11 +404,11 @@ Nextflow
 
 [Nextflow, nf-core pipelines are stored on Github](https://github.com/nf-core)
 
-## Workflow managment systems, Seqera, Nexflow summarized
+## Arbetsflödes hanterings program, Nextflow - del 5
 
 ![](images\nextflow_summary\nextflow_summary_4.png)
 
-## Workflow managment systems, Seqera, Nexflow summarized
+## Arbetsflödes hanterings program, Nextflow - sista
 
 ![](images\nextflow_summary\nextflow_summary_5.png)
 

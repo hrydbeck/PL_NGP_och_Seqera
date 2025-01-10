@@ -13,7 +13,7 @@
 <link href="Bioinformatik_pa_PL_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.555">
 
-  <meta name="dcterms.date" content="2025-01-09">
+  <meta name="dcterms.date" content="2025-01-10">
   <title>PL, NGP och Nextflow</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -337,7 +337,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">2025-01-09</p>
+  <p class="date">2025-01-10</p>
 </section>
 <section id="centrala-uppgifter-för-mig-ngs-och-klinisk-data" class="slide level2">
 <h2>Centrala uppgifter för mig, NGS och klinisk data</h2>
@@ -349,14 +349,38 @@
 </ul></li>
 <li>Arbetsflöde för identifiera och annotera genetiska varianter utifrån WGS data.
 <ul>
-<li>Med test-data på HPC för ikke sensitiv data</li>
+<li>Med test-data på <strong>HPC</strong> för ikke sensitiv data</li>
 <li>Med vår data på NGP/GRID</li>
 </ul></li>
-<li>Välja ut lämpliga program och scripta
+<li>Mikrobilellt övervaknings verktyg på NGP
 <ul>
-<li>Mikrobilellt övervaknings verktyg på NGP</li>
+<li>komplettera existerande system</li>
+<li>Välja ut lämpliga program och scripta</li>
 </ul></li>
 </ul>
+</section>
+<section id="beräkings-resurser---high-performance-computing-cluster-hpc" class="slide level2">
+<h2>Beräkings resurser - High Performance computing Cluster (HPC)</h2>
+
+<img data-src="images\HPC-schematic.png" class="r-stretch"></section>
+<section id="beräkings-resurser---moln-beräkning-aws" class="slide level2">
+<h2>Beräkings resurser - Moln beräkning (AWS)</h2>
+
+<img data-src="images\Cloud_computing.png" class="r-stretch"></section>
+<section id="hpc---cloud---jobbschemaläggare-och-resurshanterare" class="slide level2">
+<h2>HPC - cloud - Jobbschemaläggare och resurshanterare</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images\pl_NGP_2.png"></p>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>Slurm</li>
+<li>Altair grid engine</li>
+<li>Kubernetes</li>
+<li>…</li>
+</ul>
+</div>
+</div>
 </section>
 <section id="pl---sammanhang-och-funktion-inom-rö" class="slide level2">
 <h2><span style="color:orange;">PL</span> - sammanhang och funktion inom RÖ</h2>
@@ -483,14 +507,6 @@
 ![](images\networks\snabbt_nätverk.drawio_no_legend.png)
 -->
 <img data-src="images\networks2\networks10.drawio.png" class="r-stretch"></section>
-<section id="beräkings-resurser---high-performance-computing-cluster-hpc" class="slide level2">
-<h2>Beräkings resurser - High Performance computing Cluster (HPC)</h2>
-
-<img data-src="images\HPC-schematic.png" class="r-stretch"></section>
-<section id="beräkings-resurser---moln-beräkning-aws" class="slide level2">
-<h2>Beräkings resurser - Moln beräkning (AWS)</h2>
-
-<img data-src="images\Cloud_computing.png" class="r-stretch"></section>
 <section id="pl-ingår-in-nätverket-gms-genome-medicine-sweden" class="slide level2">
 <h2>Pl ingår in nätverket GMS (Genome Medicine Sweden)</h2>
 <ul>
@@ -554,11 +570,12 @@
 
 -->
 </section>
-<section id="ngp-kör-i-huvudsak-workflows" class="slide level2">
-<h2>NGP kör i huvudsak workflows</h2>
+<section id="ngpc-är-i-huvudsak-tänkt-att-köra-workflows" class="slide level2">
+<h2>NGPc är i huvudsak tänkt att köra workflows</h2>
 <ul>
-<li>På NGP commander (NGPc) installeras det workflows. Huvudsakligen baserat på Workflow management systemet Nextflow.</li>
-<li>Vad är ett workflow?</li>
+<li>Huvudsakligen baserat på Workflow management systemet Nextflow.</li>
+<li>Ett av de prioriterade är nf-core/raredisease</li>
+<li>Utför det som önskas av vår raredisease grupp</li>
 </ul>
 </section>
 <section id="sällsynta-diagnoser---workflow" class="slide level2">
@@ -571,8 +588,8 @@
 </div>
 </div>
 </section>
-<section id="sällsynta-diagnoser---workflow---hur-det-skulle-kunna-se-ut" class="slide level2">
-<h2>Sällsynta diagnoser - workflow - hur det skulle kunna se ut</h2>
+<section id="sällsynta-diagnoser---arbetsflöde---utvecklat-av-nf-core" class="slide level2">
+<h2>Sällsynta diagnoser - arbetsflöde - utvecklat av nf-core</h2>
 <div class="columns">
 <div class="column" style="width:80%;">
 <p><img data-src="images\raredisease_metromap_dark.png"></p>
@@ -581,8 +598,8 @@
 </div>
 </div>
 </section>
-<section id="hur-var-kan-ett-sådantsådana-arbetsflöden-utvecklas-och-köras" class="slide level2">
-<h2>Hur var kan ett sådant/sådana arbetsflöde(n) utvecklas och köras?</h2>
+<section id="det-är-inte-enkelt-att-utveckla-och-köra-bioinformatiska-arbetsflöden" class="slide level2">
+<h2>Det är inte enkelt att utveckla och köra bioinformatiska arbetsflöden</h2>
 <ul>
 <li>Samarbetsbaserad och versionskontrollerad utveckling</li>
 <li>Friktionslöst att köra på olika system</li>
@@ -590,8 +607,8 @@
 <li>Hjälpsystem för hanteringen av komplexiteten hos ett arbetsflöde</li>
 </ul>
 </section>
-<section id="arbetsflödes-hanteringsprogram" class="slide level2">
-<h2>Arbetsflödes hanteringsprogram</h2>
+<section id="arbetsflödes-hanterings-program" class="slide level2">
+<h2>Arbetsflödes hanterings program</h2>
 <ul>
 <li><p>Inte bara ett verktyg för att köra men också script språk för att utveckla</p></li>
 <li><p>Behöver förutom att bygga kedjor av program också kunna samarbeta med:</p>
@@ -603,12 +620,12 @@
 <p>Vi skall se mer på det</p></li>
 </ul>
 </section>
-<section id="workflow-managment-systems-seqera-nexflow-summarized" class="slide level2">
-<h2>Workflow managment systems, Seqera, Nexflow summarized</h2>
+<section id="arbetsflödes-hanterings-program-nextflow---del-1" class="slide level2">
+<h2>Arbetsflödes hanterings program, Nextflow - del 1</h2>
 
 <img data-src="images\nextflow_summary\nextflow_summary_0.png" class="r-stretch"></section>
-<section id="workflow-managment-systems-seqera-nexflow-summarized-1" class="slide level2">
-<h2>Workflow managment systems, Seqera, Nexflow summarized</h2>
+<section id="arbetsflödes-hanterings-program-nextflow---del-2" class="slide level2">
+<h2>Arbetsflödes hanterings program, Nextflow - del 2</h2>
 
 <img data-src="images\nextflow_summary\nextflow_summary_1.png" class="r-stretch"></section>
 <section id="vad-kan-versionskontrolleras" class="slide level2">
@@ -637,6 +654,10 @@
 <li><a href="https://github.com/Illumina/manta">Illumina Manta</a></li>
 </ul>
 </section>
+<section id="arbetsflödes-hanterings-program-nextflow---del-3" class="slide level2">
+<h2>Arbetsflödes hanterings program, Nextflow - del 3</h2>
+
+<img data-src="images\nextflow_summary\nextflow_summary_2.png" class="r-stretch"></section>
 <section id="köra-var-som-helst" class="slide level2">
 <h2>Köra var som helst</h2>
 <p>Mjukvara förpackas med nödvändiga komponenter (dependancies) från OS och programmeringsmiljö i “containers”</p>
@@ -659,41 +680,22 @@
 </div>
 </div>
 </section>
-<section id="workflow-managment-systems-seqera-nexflow-summarized-2" class="slide level2">
-<h2>Workflow managment systems, Seqera, Nexflow summarized</h2>
-
-<img data-src="images\nextflow_summary\nextflow_summary_2.png" class="r-stretch"></section>
 <section id="make-and-run-singularity-container-on-virtual-server" class="slide level2">
 <h2>Make and run singularity container on virtual server</h2>
 <p>Gå till <a href="https://seqera.io/containers/">Seqera containers</a> och få en container för ett program.Tex bwa-mem2.</p>
 <p>community.wave.seqera.io/library/bwa-mem2:b477244b26cdcee4</p>
 <pre><code>wave --conda bwa </code></pre>
 </section>
-<section id="hpc---cloud---jobbschemaläggare-och-resurshanterare" class="slide level2">
-<h2>HPC - cloud - Jobbschemaläggare och resurshanterare</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="images\pl_NGP_2.png"></p>
-</div><div class="column" style="width:50%;">
-<ul>
-<li>Slurm</li>
-<li>Altair grid engine</li>
-<li>Kubernetes</li>
-<li>…</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="workflow-managment-systems-seqera-nexflow-summarized-3" class="slide level2">
-<h2>Workflow managment systems, Seqera, Nexflow summarized</h2>
+<section id="arbetsflödes-hanterings-program-nextflow---del-4" class="slide level2">
+<h2>Arbetsflödes hanterings program, Nextflow - del 4</h2>
 
 <img data-src="images\nextflow_summary\nextflow_summary_3.png" class="r-stretch"></section>
 <section id="nextflow-är-ett-programmeringsspråk" class="slide level2">
 <h2>Nextflow är ett programmeringsspråk</h2>
 </section>
-<section id="arbetssflödes-hanteringsprogram" class="slide level2">
-<h2>Arbetssflödes hanteringsprogram</h2>
-<p>Nextflow</p>
+<section id="nextflow-är-ett-orkestrerings-verktyg" class="slide level2">
+<h2>Nextflow är ett orkestrerings verktyg</h2>
+<p>Förutom orkestrering av de ingående programmen så kan man interagera med…</p>
 
 <img data-src="images\nextflow_1.PNG" width="700" class="r-stretch"></section>
 <section id="nf-core-modules" class="slide level2">
@@ -704,12 +706,12 @@
 <h2>Nextflow, nf-core pipelines are stored on Github</h2>
 <p><a href="https://github.com/nf-core">Nextflow, nf-core pipelines are stored on Github</a></p>
 </section>
-<section id="workflow-managment-systems-seqera-nexflow-summarized-4" class="slide level2">
-<h2>Workflow managment systems, Seqera, Nexflow summarized</h2>
+<section id="arbetsflödes-hanterings-program-nextflow---del-5" class="slide level2">
+<h2>Arbetsflödes hanterings program, Nextflow - del 5</h2>
 
 <img data-src="images\nextflow_summary\nextflow_summary_4.png" class="r-stretch"></section>
-<section id="workflow-managment-systems-seqera-nexflow-summarized-5" class="slide level2">
-<h2>Workflow managment systems, Seqera, Nexflow summarized</h2>
+<section id="arbetsflödes-hanterings-program-nextflow---sista" class="slide level2">
+<h2>Arbetsflödes hanterings program, Nextflow - sista</h2>
 
 <img data-src="images\nextflow_summary\nextflow_summary_5.png" class="r-stretch"></section>
 <section id="nextflow-from-command-line" class="slide level2">
@@ -1203,7 +1205,7 @@
       }
     });
     </script>
-    <script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox","loop":false,"openEffect":"zoom"});
+    <script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":false,"descPosition":"bottom","openEffect":"zoom"});
     window.onload = () => {
       lightboxQuarto.on('slide_before_load', (data) => {
         const { slideIndex, slideNode, slideConfig, player, trigger } = data;
