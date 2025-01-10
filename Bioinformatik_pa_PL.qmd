@@ -52,6 +52,45 @@ editor: visual
 :::
 :::
 
+## Pl ingår in nätverket GMS (Genome Medicine Sweden)
+
+
+- Startade 2018 som ett samverkans projekt mellan regionerna 
+  I huvudsak
+- Pengar från Sveriges innovation myndighet - Vinnova
+  - Senare också från ett Vinnova strategiska-innovationsprogram: Swelife
+
+## PL - sammanhang och funktion inom GMS
+
+
+Parallelt med Scilife-lab nätverk
+
+::: columns
+::: {.column width="40%"}
+![](images\pl_GMC_1.png)
+:::
+
+::: {.column width="60%"}
+- Scilife-lab
+  -   CG - Clinical Genomic  key services
+- Genome Mediciene Sweden
+  -   GMC - Genomisk Medicin Centrum 
+:::
+:::
+
+## National genomics Platform (NGP)
+
+Navet i GMS inbördes samverkan
+
+![](images\pl_NGP_1.png)
+
+## NGP - mer detaljerat
+
+Också samverkan med andra instanser
+
+![](images\NGPÖversikt_1.png)
+
+
 
 ## [PL]{style="color:orange;"}  - sammanhang och funktion inom RÖ
 
@@ -97,21 +136,28 @@ editor: visual
 :::
 :::
 
-## Sekvenserings- och klinisk data
 
-![](images\upload_data\pl_ngp_purpose_3.drawio.png)
-
-## Sekvenserings- och klinisk data
-
-![](images\upload_data\pl_ngp_purpose_5.drawio.png)
-
-## Sekvenserings- och klinisk data
-
-![](images\upload_data\pl_ngp_purpose_7.drawio.png)
 
 ## PL- Next Genaration Sequencing (NGS) {auto-animate="true"}
 
 ![](images\pl_arbetsflöde\pl_4_2.png){.lightbox width="400"}
+
+## Vad är ett arbetsflöde?
+
+![](images\arbetsflöde_definition.drawio.png)
+
+  
+## Vad är ett arbetsflöde?
+
+![](images\arbetsflöde_definition.drawio.png)
+
+På PL handlar det om:
+
+- Extrahera
+  - fysiskt material ur ett annant
+  - information ut data
+  - kunskap ur information
+  
 
 ## PL - NGS - Arbetsflöden
 
@@ -134,26 +180,74 @@ editor: visual
 :::
 :::
 
-## Vad är ett arbetsflöde?
+## Viktig data som genereras 
 
-![](images\arbetsflöde_definition.drawio.png)
+::: columns
+::: {.column width="70%"}
 
-  
-## Vad är ett arbetsflöde?
 
-![](images\arbetsflöde_definition.drawio.png)
+![](images\upload_data\pl_ngp_purpose_3.drawio.png)
 
-På PL handlar det om:
+:::
 
-- Extrahera
-  - fysiskt material ur ett annant
-  - information ut data
-  - kunskap ur information
-  
+::: {.column width="30%"}
+- Variant information (från processering av sekvenserings data)
+- klinisk data
+
+:::
+:::
+
+## Viktig data som genereras
+
+::: columns
+::: {.column width="70%"}
+
+
+
+
+![](images\upload_data\pl_ngp_purpose_5.drawio.png)
+:::
+
+::: {.column width="30%"}
+
+- Används vid tolkning
+
+:::
+:::
+
+## Viktig data som genereras
+
+::: columns
+::: {.column width="70%"}
+
+
+![](images\upload_data\pl_ngp_purpose_7.drawio.png)
+
+:::
+
+::: {.column width="30%"}
+
+- För att eftersträva bättre liv för sjuka
+- Men också för bredare användningsområden
+
+:::
+:::
 
 ## PL - gemensamt
 
+::: columns
+::: {.column width="70%"}
+
 ![](images\pl_gemensamt\pl_gemensamt_2.png)
+
+:::
+
+::: {.column width="30%"}
+
+- Sekvenseringsmaskiner och...
+
+:::
+:::
 
 ## PL - gemensamt
 
@@ -191,44 +285,6 @@ På PL handlar det om:
 ```
 
 
-## Pl ingår in nätverket GMS (Genome Medicine Sweden)
-
-
-- Startade 2018 som ett samverkans projekt mellan regionerna 
-  I huvudsak
-- Pengar från Sveriges innovation myndighet - Vinnova
-  - Senare också från ett Vinnova strategiska-innovationsprogram: Swelife
-
-## PL - sammanhang och funktion inom GMS
-
-
-Parallelt med Scilife-lab nätverk
-
-::: columns
-::: {.column width="40%"}
-![](images\pl_GMC_1.png)
-:::
-
-::: {.column width="60%"}
-- Scilife-lab
-  -   CG - Clinical Genomic  key services
-- Genome Mediciene Sweden
-  -   GMC - Genomisk Medicin Centrum 
-:::
-:::
-
-
-## National genomics Platform (NGP)
-
-Navet i GMS inbördes samverkan
-
-![](images\pl_NGP_1.png)
-
-## NGP - mer detaljerat
-
-Också samverkan med andra instanser
-
-![](images\NGPÖversikt_1.png)
 
 
 
@@ -288,6 +344,12 @@ Också samverkan med andra instanser
 ![](images\pl_arbetsflöde\pl_4_3_rd.png)
 :::
 :::
+
+## nf-core
+
+- ..kallar sig en intressegrupp som som använder sig av arbetsflödeshanterings programmet Nextflow 
+- Utvecklar och följer standarder för arbetsflödesutveckling.
+- Mer om Nextflow senare
 
 ## Det är inte enkelt att utveckla och köra bioinformatiska arbetsflöden
 
@@ -390,12 +452,6 @@ wave --conda bwa
 
 ## Nextflow är ett programmeringsspråk
 
-## Nextflow är ett orkestrerings verktyg
-
-Förutom orkestrering av de ingående programmen så kan man interagera med...
-
-![](images\nextflow_1.PNG){width="700"}
-
 ## nf-core modules
 
 [nf-core modules](https://nf-co.re/modules/){preview-link="true"}
@@ -403,6 +459,12 @@ Förutom orkestrering av de ingående programmen så kan man interagera med...
 ## Nextflow, nf-core pipelines are stored on Github
 
 [Nextflow, nf-core pipelines are stored on Github](https://github.com/nf-core)
+
+## Nextflow är ett orkestrerings verktyg
+
+Förutom orkestrering av de ingående programmen så kan man interagera med...
+
+![](images\nextflow_1.PNG){width="700"}
 
 ## Arbetsflödes hanterings program, Nextflow - del 5
 
