@@ -13,8 +13,8 @@
 <link href="Bioinformatik_pa_PL_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.555">
 
-  <meta name="dcterms.date" content="2025-01-10">
-  <title>PL, NGP och Nextflow</title>
+  <meta name="dcterms.date" content="2025-01-13">
+  <title>Processering av NGS data på PL</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -332,22 +332,23 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">PL, NGP och Nextflow</h1>
+  <h1 class="title">Processering av NGS data på PL</h1>
+  <p class="subtitle">Genome Medicine Sweden och Nextflow</p>
 
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">2025-01-10</p>
+  <p class="date">2025-01-13</p>
 </section>
-<section id="centrala-uppgifter-för-mig-ngs-och-klinisk-data" class="slide level2">
-<h2>Centrala uppgifter för mig, NGS och klinisk data</h2>
+<section id="centrala-uppgifter-ngs-och-klinisk-data" class="slide level2">
+<h2>Centrala uppgifter, NGS och klinisk data</h2>
 <ul>
 <li>Samla in och lasta upp från hårdiskar och LIS till NGP
 <ul>
 <li>Det som finns lagrat</li>
 <li>Automatik för framtiden</li>
 </ul></li>
-<li>Arbetsflöde för identifiera och annotera genetiska varianter utifrån WGS data.
+<li>Arbetsflöde sällsynta diagnoser
 <ul>
 <li>Med test-data på <strong>HPC</strong> för ikke sensitiv data</li>
 <li>Med vår data på NGP/GRID</li>
@@ -355,7 +356,7 @@
 <li>Mikrobilellt övervaknings verktyg på NGP
 <ul>
 <li>komplettera existerande system</li>
-<li>Välja ut lämpliga program och scripta</li>
+<li>lämpliga program och scripta</li>
 </ul></li>
 </ul>
 </section>
@@ -363,10 +364,6 @@
 <h2>Beräkings resurser - High Performance computing Cluster (HPC)</h2>
 
 <img data-src="images\HPC-schematic.png" class="r-stretch"></section>
-<section id="beräkings-resurser---moln-beräkning-aws" class="slide level2">
-<h2>Beräkings resurser - Moln beräkning (AWS)</h2>
-
-<img data-src="images\Cloud_computing.png" class="r-stretch"></section>
 <section id="hpc---cloud---jobbschemaläggare-och-resurshanterare" class="slide level2">
 <h2>HPC - cloud - Jobbschemaläggare och resurshanterare</h2>
 <div class="columns">
@@ -382,14 +379,19 @@
 </div>
 </div>
 </section>
+<section id="beräkings-resurser---moln-beräkning-aws" class="slide level2">
+<h2>Beräkings resurser - Moln beräkning (AWS)</h2>
+
+<img data-src="images\Cloud_computing.png" class="r-stretch"></section>
 <section id="pl-ingår-in-nätverket-gms-genome-medicine-sweden" class="slide level2">
 <h2>Pl ingår in nätverket GMS (Genome Medicine Sweden)</h2>
 <ul>
-<li>Startade 2018 som ett samverkans projekt mellan regionerna I huvudsak</li>
+<li>Startade 2018 som ett samverkans projekt mellan regionerna i huvudsak</li>
 <li>Pengar från Sveriges innovation myndighet - Vinnova
 <ul>
 <li>Senare också från ett Vinnova strategiska-innovationsprogram: Swelife</li>
 </ul></li>
+<li>Projekt drivs som 7 arbetspaket</li>
 </ul>
 </section>
 <section id="pl---sammanhang-och-funktion-inom-gms" class="slide level2">
@@ -404,7 +406,7 @@
 <ul>
 <li>CG - Clinical Genomic key services</li>
 </ul></li>
-<li>Genome Mediciene Sweden
+<li>Genome Medicine Sweden
 <ul>
 <li>GMC - Genomisk Medicin Centrum</li>
 </ul></li>
@@ -728,17 +730,68 @@
 <p>community.wave.seqera.io/library/bwa-mem2:b477244b26cdcee4</p>
 <pre><code>wave --conda bwa </code></pre>
 </section>
+<section id="nextflow-moduler" class="slide level2">
+<h2>Nextflow moduler</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<p>En folder med</p>
+<p>Script fil som innehåller:</p>
+<ul>
+<li>Kod som använder containerengines få tag i motsvarande container</li>
+<li>Kommandon för att köra containern med önskade parametrar</li>
+</ul>
+<p>Text fil som innehåller:</p>
+<ul>
+<li>Beskrivingn och version av containerns som används</li>
+</ul>
+</div><div class="column" style="width:30%;">
+
+</div>
+</div>
+</section>
+<section id="nexflow-är-ett-programmerings-språk" class="slide level2">
+<h2>Nexflow är ett programmerings språk</h2>
+<p>Ett workflow script:</p>
+
+<img data-src="images\nextflow_summary\nextflow_main_nf_scipt.drawio.png" class="r-stretch"></section>
+<section id="ett-stort-arbetsflödes-script-är-uppdelat" class="slide level2">
+<h2>Ett stort arbetsflödes script är uppdelat</h2>
+<p>I en folderhierarki med subfoldrar för script som definerar</p>
+<ul>
+<li>subworkflows</li>
+<li>moduler</li>
+<li>konfigurationsfiler</li>
+</ul>
+<p><a href="https://github.com/nf-core">Github repository för nf-core/raredisease</a></p>
+</section>
+<section id="nextflow-moduler-1" class="slide level2">
+<h2>Nextflow moduler</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<p>En folder med</p>
+<p>Script fil som innehåller:</p>
+<ul>
+<li>Kod som använder containerengines få tag i motsvarande container</li>
+<li>Kommandon för att köra containern med önskade parametrar</li>
+</ul>
+<p>Text fil som innehåller:</p>
+<ul>
+<li>Beskrivingn och version av containerns som används</li>
+</ul>
+</div><div class="column" style="width:30%;">
+<p><img data-src="images\module.png"></p>
+<p>När scriptet för en modul är på plats så kan det <a href="https://nf-co.re/modules/" data-preview-link="true">delas</a> mellan arbetsflöden</p>
+</div>
+</div>
+</section>
+<section id="ett-script-som-anropar-ett-att-antal-moduler-i-en-föjd" class="slide level2">
+<h2>Ett script som anropar ett att antal moduler i en föjd</h2>
+
+<img data-src="images\modules_in_a_row.png" class="r-stretch"></section>
 <section id="arbetsflödes-hanterings-program-nextflow---del-4" class="slide level2">
 <h2>Arbetsflödes hanterings program, Nextflow - del 4</h2>
 
 <img data-src="images\nextflow_summary\nextflow_summary_3.png" class="r-stretch"></section>
-<section id="nextflow-är-ett-programmeringsspråk" class="slide level2">
-<h2>Nextflow är ett programmeringsspråk</h2>
-</section>
-<section id="nf-core-modules" class="slide level2">
-<h2>nf-core modules</h2>
-<p><a href="https://nf-co.re/modules/" data-preview-link="true">nf-core modules</a></p>
-</section>
 <section id="nextflow-nf-core-pipelines-are-stored-on-github" class="slide level2">
 <h2>Nextflow, nf-core pipelines are stored on Github</h2>
 <p><a href="https://github.com/nf-core">Nextflow, nf-core pipelines are stored on Github</a></p>
@@ -762,20 +815,7 @@
 <section id="seqera-platform" class="slide level2">
 <h2>Seqera platform</h2>
 <p>Also put in an image of file tree to show that getting an overview of all the files is messy from command line</p>
-
-<img data-src="images\seqera_1.png" width="700" class="r-stretch"></section>
-<section id="excalidraw" class="slide level2">
-<h2>Excalidraw</h2>
-<p><a href="https://excalidraw.com/" data-preview-link="true">Excalidraw</a></p>
-</section>
-<section id="code" class="slide level2">
-<h2>Code</h2>
-<p>When you click the <strong>Render</strong> button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
-</div>
-</div>
+<p><img data-src="images\seqera_1.png" width="700"></p>
 <div class="quarto-auto-generated-content">
 <p><img src="images\RÖ_logos\ROlogo-P-vit.png" class="slide-logo"></p>
 <div class="footer footer-default">
@@ -995,82 +1035,6 @@
         ]
       });
     </script>
-    
-
-    <script>
-
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-
-      // slide changes (different for each slide format).
-
-      (function () {
-
-        // dispatch for htmlwidgets
-
-        function fireSlideEnter() {
-
-          const event = window.document.createEvent("Event");
-
-          event.initEvent("slideenter", true, true);
-
-          window.document.dispatchEvent(event);
-
-        }
-
-    
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          fireSlideEnter();
-
-    
-
-          // dispatch for shiny
-
-          if (window.jQuery) {
-
-            if (previousSlide) {
-
-              window.jQuery(previousSlide).trigger("hidden");
-
-            }
-
-            if (currentSlide) {
-
-              window.jQuery(currentSlide).trigger("shown");
-
-            }
-
-          }
-
-        }
-
-    
-
-        // hookup for slidy
-
-        if (window.w3c_slidy) {
-
-          window.w3c_slidy.add_observer(function (slide_num) {
-
-            // slide_num starts at position 1
-
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-
-          });
-
-        }
-
-    
-
-      })();
-
-    </script>
-
-    
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
@@ -1247,7 +1211,7 @@
       }
     });
     </script>
-    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"descPosition":"bottom","selector":".lightbox","openEffect":"zoom"});
+    <script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","loop":false,"selector":".lightbox","openEffect":"zoom"});
     window.onload = () => {
       lightboxQuarto.on('slide_before_load', (data) => {
         const { slideIndex, slideNode, slideConfig, player, trigger } = data;

@@ -1,5 +1,6 @@
 ---
-title: "PL, NGP och Nextflow"
+title: "Processering av NGS data på PL"
+subtitle: "Genome Medicine Sweden och Nextflow"
 # author: "Halfdan Rydbeck"
 date: now
 format: 
@@ -15,27 +16,23 @@ format:
 editor: visual
 ---
 
-## Centrala uppgifter för mig, NGS och klinisk data
+## Centrala uppgifter, NGS och klinisk data
 
 -   Samla in och lasta upp från hårdiskar och LIS till NGP
     -   Det som finns lagrat
     -   Automatik för framtiden
--   Arbetsflöde för identifiera och annotera genetiska varianter utifrån WGS data.
+-   Arbetsflöde sällsynta diagnoser
     -   Med test-data på **HPC** för ikke sensitiv data
     -   Med vår data på NGP/GRID
 -   Mikrobilellt övervaknings verktyg på NGP
     - komplettera existerande system
-    - Välja ut lämpliga program och scripta
+    - lämpliga program och scripta
     
  
 
 ## Beräkings resurser - High Performance computing Cluster (HPC)
 
 ![](images\HPC-schematic.png)
-
-## Beräkings resurser - Moln beräkning (AWS)
-
-![](images\Cloud_computing.png)
 
 ## HPC - cloud - Jobbschemaläggare och resurshanterare
 
@@ -52,13 +49,20 @@ editor: visual
 :::
 :::
 
+
+## Beräkings resurser - Moln beräkning (AWS)
+
+![](images\Cloud_computing.png)
+
+
 ## Pl ingår in nätverket GMS (Genome Medicine Sweden)
 
 
 - Startade 2018 som ett samverkans projekt mellan regionerna 
-  I huvudsak
+  i huvudsak
 - Pengar från Sveriges innovation myndighet - Vinnova
   - Senare också från ett Vinnova strategiska-innovationsprogram: Swelife
+- Projekt drivs som 7 arbetspaket
 
 ## PL - sammanhang och funktion inom GMS
 
@@ -73,7 +77,7 @@ Parallelt med Scilife-lab nätverk
 ::: {.column width="60%"}
 - Scilife-lab
   -   CG - Clinical Genomic  key services
-- Genome Mediciene Sweden
+- Genome Medicine Sweden
   -   GMC - Genomisk Medicin Centrum 
 :::
 :::
@@ -445,16 +449,87 @@ community.wave.seqera.io/library/bwa-mem2:b477244b26cdcee4
 wave --conda bwa 
 ```
 
+## Nextflow moduler
+
+::: columns
+::: {.column width="70%"}
+
+En folder med 
+
+Script fil som innehåller:
+
+- Kod som använder containerengines få tag i motsvarande container
+- Kommandon för att köra containern med önskade parametrar
+
+Text fil som innehåller:
+
+ - Beskrivingn och version av containerns som används
+
+
+:::
+::: {.column width="30%"}
+
+
+:::
+:::
+## Nexflow är ett programmerings språk 
+
+Ett workflow script:
+
+![](images\nextflow_summary\nextflow_main_nf_scipt.drawio.png)
+
+
+
+## Ett stort arbetsflödes script är uppdelat 
+
+I en folderhierarki med subfoldrar för script som definerar 
+
+- subworkflows
+- moduler
+- konfigurationsfiler
+
+[Github repository för nf-core/raredisease](https://github.com/nf-core)
+
+
+## Nextflow moduler
+
+::: columns
+::: {.column width="70%"}
+
+En folder med 
+
+Script fil som innehåller:
+
+- Kod som använder containerengines få tag i motsvarande container
+- Kommandon för att köra containern med önskade parametrar
+
+Text fil som innehåller:
+
+ - Beskrivingn och version av containerns som används
+
+
+:::
+::: {.column width="30%"}
+
+![](images\module.png)
+
+När scriptet för en modul är på plats så kan det [delas](https://nf-co.re/modules/){preview-link="true"} mellan arbetsflöden
+
+
+:::
+:::
+
+
+
+## Ett script som anropar ett att antal moduler i en föjd
+
+![](images\modules_in_a_row.png)
+
 
 ## Arbetsflödes hanterings program, Nextflow - del 4
 
 ![](images\nextflow_summary\nextflow_summary_3.png)
 
-## Nextflow är ett programmeringsspråk
-
-## nf-core modules
-
-[nf-core modules](https://nf-co.re/modules/){preview-link="true"}
 
 ## Nextflow, nf-core pipelines are stored on Github
 
@@ -482,14 +557,4 @@ Also put in an image of file tree to show that getting an overview of all the fi
 
 ![](images\seqera_1.png){width="700"}
 
-## Excalidraw
 
-[Excalidraw](https://excalidraw.com/){preview-link="true"}
-
-## Code
-
-When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
-
-```{r}
-1 + 1
-```
