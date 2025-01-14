@@ -439,39 +439,22 @@ Från OS (Container engines):
 :::
 :::
 
+
+```{=html}
+<!--
+
 ## Make and run singularity container on virtual server
 
 Gå till [Seqera containers](https://seqera.io/containers/) och få en container för ett program.Tex bwa-mem2.
 
 community.wave.seqera.io/library/bwa-mem2:b477244b26cdcee4
 
-```         
+         
 wave --conda bwa 
+
+-->
 ```
 
-## Nextflow moduler
-
-::: columns
-::: {.column width="70%"}
-
-En folder med 
-
-Script fil som innehåller:
-
-- Kod som använder containerengines få tag i motsvarande container
-- Kommandon för att köra containern med önskade parametrar
-
-Text fil som innehåller:
-
- - Beskrivingn och version av containerns som används
-
-
-:::
-::: {.column width="30%"}
-
-
-:::
-:::
 ## Nexflow är ett programmerings språk 
 
 Ett workflow script:

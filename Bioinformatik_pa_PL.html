@@ -13,7 +13,7 @@
 <link href="Bioinformatik_pa_PL_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.555">
 
-  <meta name="dcterms.date" content="2025-01-13">
+  <meta name="dcterms.date" content="2025-01-14">
   <title>Processering av NGS data på PL</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -338,7 +338,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">2025-01-13</p>
+  <p class="date">2025-01-14</p>
 </section>
 <section id="centrala-uppgifter-ngs-och-klinisk-data" class="slide level2">
 <h2>Centrala uppgifter, NGS och klinisk data</h2>
@@ -723,31 +723,18 @@
 </ul>
 </div>
 </div>
-</section>
-<section id="make-and-run-singularity-container-on-virtual-server" class="slide level2">
-<h2>Make and run singularity container on virtual server</h2>
-<p>Gå till <a href="https://seqera.io/containers/">Seqera containers</a> och få en container för ett program.Tex bwa-mem2.</p>
-<p>community.wave.seqera.io/library/bwa-mem2:b477244b26cdcee4</p>
-<pre><code>wave --conda bwa </code></pre>
-</section>
-<section id="nextflow-moduler" class="slide level2">
-<h2>Nextflow moduler</h2>
-<div class="columns">
-<div class="column" style="width:70%;">
-<p>En folder med</p>
-<p>Script fil som innehåller:</p>
-<ul>
-<li>Kod som använder containerengines få tag i motsvarande container</li>
-<li>Kommandon för att köra containern med önskade parametrar</li>
-</ul>
-<p>Text fil som innehåller:</p>
-<ul>
-<li>Beskrivingn och version av containerns som används</li>
-</ul>
-</div><div class="column" style="width:30%;">
+<!--
 
-</div>
-</div>
+## Make and run singularity container on virtual server
+
+Gå till [Seqera containers](https://seqera.io/containers/) och få en container för ett program.Tex bwa-mem2.
+
+community.wave.seqera.io/library/bwa-mem2:b477244b26cdcee4
+
+         
+wave --conda bwa 
+
+-->
 </section>
 <section id="nexflow-är-ett-programmerings-språk" class="slide level2">
 <h2>Nexflow är ett programmerings språk</h2>
@@ -764,7 +751,7 @@
 </ul>
 <p><a href="https://github.com/nf-core">Github repository för nf-core/raredisease</a></p>
 </section>
-<section id="nextflow-moduler-1" class="slide level2">
+<section id="nextflow-moduler" class="slide level2">
 <h2>Nextflow moduler</h2>
 <div class="columns">
 <div class="column" style="width:70%;">
@@ -1211,7 +1198,7 @@
       }
     });
     </script>
-    <script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","loop":false,"selector":".lightbox","openEffect":"zoom"});
+    <script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":false});
     window.onload = () => {
       lightboxQuarto.on('slide_before_load', (data) => {
         const { slideIndex, slideNode, slideConfig, player, trigger } = data;
