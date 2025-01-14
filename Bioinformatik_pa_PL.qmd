@@ -471,7 +471,7 @@ I en folderhierarki med subfoldrar för script som definerar
 - moduler
 - konfigurationsfiler
 
-[Github repository för nf-core/raredisease](https://github.com/nf-core)
+[Github repository för nf-core/raredisease](https://github.com/nf-core/raredisease)
 
 
 ## Nextflow moduler
