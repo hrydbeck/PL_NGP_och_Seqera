@@ -504,7 +504,7 @@ När scriptet för en modul är på plats så kan det [delas](https://nf-co.re/m
 
 
 
-## Ett script som anropar ett att antal moduler i en föjd
+## Ett script som anropar ett att antal moduler i en följd
 
 ![](images\modules_in_a_row.png)
 
